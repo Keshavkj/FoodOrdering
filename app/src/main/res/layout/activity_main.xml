@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@string/location"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:fontFamily="sans-serif"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/ic_baseline_location_on_24"
+            android:drawablePadding="5dp"
+            android:id="@+id/location"
+            />
+
+
+           <de.hdodenhof.circleimageview.CircleImageView
+               android:layout_width="40dp"
+               android:layout_height="40dp"
+               app:layout_constraintRight_toRightOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               android:layout_marginRight="15dp"
+               android:src="@drawable/oneseven"
+               />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/location"
+            android:textSize="25dp"
+            android:textColor="#000"
+            android:fontFamily="sans-serif"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="Online Food"
+            android:textStyle="bold"
+            android:id="@+id/onlinefood"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/onlinefood"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:textSize="25dp"
+            android:textColor="#000"
+            android:text="Delivery"
+            android:id="@+id/delivery"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            app:layout_constraintTop_toBottomOf="@id/delivery"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:padding="15dp"
+            android:textSize="19dp"
+            android:textColor="#00BCD4"
+            android:id="@+id/search"
+            android:background="@drawable/searchbar"
+            android:drawableLeft="@drawable/ic_baseline_search_24"
+            android:drawableTint="#00BCD4"
+            android:drawablePadding="10dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/search"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:id="@+id/foodMenu"
+                android:layout_margin="15dp"
+                android:layout_height="wrap_content">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/recycleView"
+
+                    />
+                </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/foodMenu"
+            android:layout_height="wrap_content"
+            android:id="@+id/recom"
+
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/recomtext"
+                android:layout_width="299dp"
+                android:layout_height="43dp"
+                android:drawableRight="@drawable/burger"
+                android:drawablePadding="5dp"
+                android:text="Recommended items"
+                android:textColor="#000"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/right_icon"
+                android:layout_alignParentRight="true"
+                /></RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/recom"
+                android:id="@+id/foodItem"
+                android:gravity="center"
+                android:layout_margin="15dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/recycleView1" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/burger_3d"
+                    android:id="@+id/burger"
+
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Burger"
+                     android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/burger"
+                    android:text="Pizza"
+                    android:id="@+id/pizza"
+                    android:textStyle="bold"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pizza"
+                    android:id="@+id/pizzaImage"
+                    android:src="@drawable/pizza"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pizzaImage"
+                    android:text="Momo"
+
+                    android:id="@+id/momo"
+                    android:textStyle="bold"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/momo"
+                    android:src="@drawable/momo"
+
+                    />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

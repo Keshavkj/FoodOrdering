@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         app:cardBackgroundColor="#fff"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="5dp"
+        android:id="@+id/food_item"
+        android:layout_margin="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/card"
+                android:layout_height="wrap_content"
+                android:id="@+id/food_item_layout"
+                >
+
+                <ImageView
+                    android:layout_width="300dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/burger_3d"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/item_img"
+                    />
+            </RelativeLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/food_item_layout"
+                    android:text="Cheesy Burger(Veg)    $10 "
+                    android:textSize="15sp"
+                    android:textColor="#0B0B0B"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/item_name"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/item_name"
+                        android:text="Chicken Burger(Non-Veg)    $11"
+                        android:textColor="#0B0B0B"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/item_type"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
